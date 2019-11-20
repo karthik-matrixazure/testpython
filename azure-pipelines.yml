@@ -19,12 +19,14 @@ steps:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
 
-- script: python -m pip install --upgrade pip setuptools wheel
-  displayName: 'Install tools'
-
-- script: python src/py_db_1.py
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+  displayName: 'Install dependencies'
 
 - script: |
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+
+- script: python src/py_db_1.py
