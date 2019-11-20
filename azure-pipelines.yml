@@ -33,4 +33,4 @@ steps:
     pytest
   displayName: 'pytest'
 
-script: python src/py_db_1.py
+- script: python src/py_db_1.py
