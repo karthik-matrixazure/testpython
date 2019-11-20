@@ -8,7 +8,7 @@ Created on Wed Nov 20 15:06:32 2019
 import pandas as pd
 import pyodbc
 
-sql_conn = pyodbc.connect(DRIVER='{SQL Server}',
+sql_conn = pyodbc.connect(DRIVER='{ODBC Driver 13 for SQL Server}',
                             SERVER='tcp:pythonazuretest.database.windows.net,1433',
                             DATABASE='PythonAzureTest',
 #                            Trusted_Connection='yes',
