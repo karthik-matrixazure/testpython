@@ -26,9 +26,9 @@ cursor.execute('SELECT * FROM PythonAzureTest.dbo.output_test')
 row = cursor.fetchone()
 print('output',row)
 #Commiting any pending transaction to the database.
-connection.commit()
+sql_conn.commit()
 print("Data Successfully Inserted")   
-connection.close()  
+sql_conn.close()  
 
 
 
