@@ -30,6 +30,10 @@ steps:
     targetFolder: $(Build.ArtifactStagingDirectory)
     Overwrite: true
 
+- task: PythonScript@0
+  inputs:
+   script: python $(Build.ArtifactStagingDirectory)/src/py_db_1.py
+
 
 
 
