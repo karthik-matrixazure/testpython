@@ -27,12 +27,12 @@ steps:
 - task: CopyFiles@2
   inputs:
     sourceFolder: src
-    targetFolder: $(Build.ArtifactStagingDirectory)
+    targetFolder: $(System.DefaultWorkingDirectory)
     Overwrite: true
 
 - task: PythonScript@0
   inputs:
-   script: python $(Build.ArtifactStagingDirectory)/py_db_1.py
+   script: python $(System.DefaultWorkingDirectory)/py_db_1.py
 
 
 
