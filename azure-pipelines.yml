@@ -26,7 +26,7 @@ steps:
 
 - task: PythonScript@0
   inputs:
-   -script: python src/py_db_1.py
+   script: python $(System.DefaultWorkingDirectory)src/py_db_1.py
 
 
 
