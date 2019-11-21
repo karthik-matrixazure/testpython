@@ -27,7 +27,7 @@ steps:
 - script: 'pip install twine'
 
 - script: |
-   twine upload -r "py_db_1" $(System.DefaultWorkingDirectory)
+   twine upload $(System.DefaultWorkingDirectory)
 
 - task: PythonScript@0
   inputs:
