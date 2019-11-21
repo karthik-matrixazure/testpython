@@ -24,8 +24,10 @@ steps:
     pip install -r requirements.txt
   displayName: 'Install dependencies'
 
+- script: 'pip install twine'
+
 - script: |
-   twine upload -r "py_db_1" --config-file $(PYPIRC_PATH) $(System.DefaultWorkingDirectory)
+   twine upload -r "py_db_1" $(System.DefaultWorkingDirectory)
 
 - task: PythonScript@0
   inputs:
