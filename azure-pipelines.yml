@@ -30,6 +30,8 @@ steps:
     targetFolder: $(System.DefaultWorkingDirectory)
     Overwrite: true
 
+- task: PublishBuildArtifacts@1
+
 - task: PythonScript@0
   inputs:
    script: python $(System.DefaultWorkingDirectory)/py_db_1.py
