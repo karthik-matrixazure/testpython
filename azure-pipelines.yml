@@ -27,7 +27,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     sourceFolder: src
-    targetFolder: $(System.DefaultWorkingDirectory)
+    targetFolder: $(Build.ArtifactStagingDirectory)
     Overwrite: true
 
 - task: PublishBuildArtifacts@1
