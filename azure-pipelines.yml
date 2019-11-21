@@ -31,6 +31,10 @@ steps:
     Overwrite: true
 
 - task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: drop
+    TargetPath: $(System.DefaultWorkingDirectory) 
 
 - task: PythonScript@0
   inputs:
