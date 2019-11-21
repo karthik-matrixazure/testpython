@@ -25,14 +25,11 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    pip install pytest
-    pip install pytest-cov
-    pytest tests --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
-  displayName: 'Test with pytest'
+   twine upload -r "py_db_1" --config-file $(PYPIRC_PATH) $(System.DefaultWorkingDirectory)
 
 - task: PythonScript@0
   inputs:
-   script: python $(System.DefaultWorkingDirectory)src/py_db_1.py
+   script: python $(System.DefaultWorkingDirectory)/src/py_db_1.py
 
 
 
