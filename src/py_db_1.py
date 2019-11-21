@@ -5,7 +5,6 @@ Created on Wed Nov 20 15:06:32 2019
 @author: Hp
 """
 
-import pandas as pd
 import pyodbc
 
 sql_conn = pyodbc.connect(DRIVER='{ODBC Driver 17 for SQL Server}',
